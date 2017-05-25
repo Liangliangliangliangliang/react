@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src='../build/react.js'></script>
+	<script src='../build/react-dom.js'></script>
+	<script src='../build/browser.min.js'></script>
+</head>
+<body>
+	<div id="example"></div>
+	<script type='text/babel'>
+	// <!-- 组件类，所有组件类必须要有一个render方法！ -->
+	var Hellomessage=React.createClass({
+	render:function(){
+	return  <h1>hello {this.props.name}</h1>;
+	}
+	});
+	ReactDOM.render(
+		<Hellomessage name='liliang' />,
+		document.getElementById('example')
+
+	);
+</script>
+</body>
+</html>
